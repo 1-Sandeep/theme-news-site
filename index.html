@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome/6.6.0/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: '#941A24',
+                        secondaryColor: '#C2CF87',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="bg-primaryColor p-4 shadow-md">
+        <nav class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="assets/images/logo/logo.png" alt="company logo" class="h-10 w-auto">
+            </a>
+
+            <!-- Hamburger Icon (visible on smaller screens) -->
+            <div class="md:hidden">
+                <button id="hamburgerBtn" class="text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menu Items (visible on screens 768px and above) -->
+            <ul class="hidden md:flex space-x-6 text-[16px] font-bold text-gray-800">
+                <li><a href="#" class="text-white hover:text-secondaryColor">गृहपृष्ठ</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">राष्ट्रिय</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">अन्तर्राष्ट्रिय</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">शेयर बजार</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">व्यापार</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">खेलकुद</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">राजनीति</a></li>
+                <li><a href="#" class="text-white hover:text-secondaryColor">अन्य</a></li>
+            </ul>
+
+            <!-- Search (visible on screens 768px and above) -->
+            <div class="hidden md:flex items-center space-x-2">
+                <form action="#" method="get" class="relative">
+                    <input type="text" name="search" id="search"
+                        class="border border-gray-300 font-bold rounded py-2 px-4 focus:ring-secondaryColor focus:border-secondaryColor text-sm w-64 outline-none outline-secondaryColor"
+                        placeholder="खोज्नुहोस्">
+                    <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <i class="fa-solid fa-magnifying-glass text-black text-[16px] font-bold"></i>
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (initially hidden) -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-primaryColor p-4">
+            <ul class="space-y-4 text-[16px] font-bold text-white">
+                <!-- Search Bar in Mobile Menu -->
+                <li>
+                    <form action="#" method="get" class="relative">
+                        <input type="text" name="search" id="mobileSearch"
+                            class="border border-gray-300 rounded py-2 px-4 focus:ring-secondaryColor focus:border-secondaryColor text-sm w-full text-black outline-none outline-secondaryColor font-normal	"
+                            placeholder="Search">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                            <i class="fa-solid fa-magnifying-glass text-black text-[16px] font-bold"></i>
+                        </button>
+                    </form>
+                </li>
+                <li><a href="#" class="hover:text-secondaryColor">गृहपृष्ठ</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">राष्ट्रिय</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">अन्तर्राष्ट्रिय</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">शेयर बजार</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">व्यापार</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">खेलकुद</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">राजनीति</a></li>
+                <li><a href="#" class="hover:text-secondaryColor">अन्य</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- News Ticker -->
+    <section>
+
+    </section>
+
+    <script src="js/fontawesome/6.6.0/all.min.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
